@@ -1,0 +1,44 @@
+//- Variables
+- var description = 'De juiste tijd in België vind je hier op deze website';
+- var image = 'http://dejuistetijd.be/img/social.jpg';
+- var title = 'De juiste tijd in België';
+- var url = 'http://dejuistetijd.be/';
+
+doctype html
+html(lang='nl-BE' prefix='og: http://ogp.me/ns#')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title #{title}
+
+    //- SEO
+    meta(name='description' content=description)
+    link(rel='canonical' href=url)
+
+    //- Open Graph
+    meta(property='og:title' content=title)
+    meta(property='og:type' content='website')
+    meta(property='og:url' content=url)
+    meta(property='og:description' content=description)
+    meta(property='og:site_name' content='De juiste tijd')
+    meta(property='og:locale' content='nl_BE')
+    meta(property='og:image' content=image)
+    meta(property='og:image:type' content='image/jpeg')
+    meta(property='og:image:width' content='1200')
+    meta(property='og:image:height' content='630')
+
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:title' content=title)
+    meta(name='twitter:description' content=description)
+    meta(name='twitter:image' content=image)
+
+    link(rel='icon' href='/favicon.ico')
+    link(rel='stylesheet' href='/css/main.css' media='screen')
+  
+  body
+    h1 #{title}
+    time
+    a.buienradar(href='https://www.buienradar.be/' rel='noreferrer' target='_blank' title='Actuele buienradar voor België, Europa, satellietbeelden, weerberichten en weersverwachtingen')
+      img(src='/img/logo.svg')
+    script(src='/js/main.js')

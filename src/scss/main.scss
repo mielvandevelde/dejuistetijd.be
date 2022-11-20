@@ -1,0 +1,81 @@
+// variables
+$breakpoint: 670px;
+
+// reset css
+@import "reset";
+
+/* box sizing reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* main */
+html,
+body {
+  height: 100%;
+}
+
+html {
+  direction: ltr;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+body {
+  align-items: center;
+  background-color: #ededed;
+  color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-kerning: normal;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.25rem; // 20px
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint) {
+    font-size: 1.875rem; // 30px
+    margin-bottom: 25px;
+  }
+}
+
+time {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+  display: block;
+  font-size: 5rem; // 80px
+  font-weight: 700;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  width: 355px;
+
+  @media (min-width: $breakpoint) {
+    font-size: 8.125rem; // 130px
+    height: 260px;
+    line-height: 260px;
+    width: 620px;
+  }
+}
+
+.buienradar {
+  margin-top: 30px;
+}
